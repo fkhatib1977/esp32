@@ -4,13 +4,40 @@
 - Hotspot for configuration
   - When 'prog' button in depressed on boot
 - Connection to MQTT logging server
-  - store data and push to server once per hour
+  - store data and push to tgdata.earlydetectionsystems.com once per hour
 - Connection to NTP time server
-  - On boot and once a day
+  - On boot and once a day get time as http request from time.earlydetectionsystems.com
 - Connection NVR video server
-  - LAN push after every data read
+  - LAN push to NVR(in appsettings.json file) after every data read
 - Connection to IP camera
-  - LAN push after every data read
+  - LAN push to camera(in appsettings.json file) after every data read
 - OTA
-  - Code updates
+  - Code updates from ota.earlydetectionsystems.com
   
+# appsettings.json file structure
+Identification
+>ClientID
+>LocationID
+>UnitID
+
+Local Network
+>DHCPStatic
+>IP
+>SubnetMask
+>DNS1
+>DNS2
+>Gateway
+
+Camera Info
+Cam IP:
+Cam Number:
+Cam Username:
+Cam Password:
+
+- NVR Info -
+NVR IP:
+NVR Username:
+NVR Password:
+
+
+
