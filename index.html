@@ -2,96 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Device Configuration - Your Company Name</title>
+    <title>Device Configuration - Tommy Guard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <style>
+        html, body, .container {
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f4f6f8;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 700px;
-            margin: 40px auto;
+            max-width: 800px;
+            margin: 48px auto;
             background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            padding: 32px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+            padding: 44px 38px 36px 38px;
+            box-sizing: border-box;
         }
         h1 {
             text-align: center;
             color: #2d3e50;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 2.3em;
+            letter-spacing: 1px;
         }
         .company {
             text-align: center;
-            font-size: 1.2em;
-            color: #4a90e2;
-            margin-bottom: 24px;
-            font-weight: bold;
+            font-size: 1.4em;
+            color: #3b82f6;
+            margin-bottom: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
         fieldset {
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            margin-bottom: 24px;
-            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            padding: 28px 20px 20px 20px;
+            background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
         }
         legend {
             font-weight: bold;
-            color: #2d3e50;
+            color: #2563eb;
             padding: 0 8px;
+            font-size: 1.15em;
+            letter-spacing: 1px;
         }
         label {
             display: block;
             margin-bottom: 6px;
             color: #34495e;
+            font-weight: 500;
         }
         input, select, textarea {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 14px;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 11px;
+            margin-bottom: 18px;
             border: 1px solid #bfc9d1;
-            border-radius: 4px;
+            border-radius: 7px;
             font-size: 1em;
+            background: #f8fafc;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px #e0e7ff;
+            outline: none;
+        }
+        input:disabled, select:disabled, textarea:disabled {
+            background: #f3f4f6 !important;
+            color: #a1a1aa !important;
+            border: 2px dashed #a1a1aa !important;
+            opacity: 1 !important;
+            cursor: not-allowed;
         }
         .form-row {
             display: flex;
-            gap: 16px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .form-row > div {
-            flex: 1;
+            flex: 1 1 0;
+            min-width: 0;
         }
         button {
-            background: #4a90e2;
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
             color: #fff;
             border: none;
-            padding: 12px 32px;
-            border-radius: 4px;
-            font-size: 1em;
+            padding: 15px 40px;
+            border-radius: 7px;
+            font-size: 1.15em;
             cursor: pointer;
-            margin-top: 12px;
+            margin-top: 22px;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            transition: background 0.2s, box-shadow 0.2s;
         }
         button:hover {
-            background: #357abd;
+            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
         }
         .output {
             background: #f9fafb;
             border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            padding: 12px;
-            margin-top: 18px;
+            border-radius: 7px;
+            padding: 18px;
+            margin-top: 28px;
             font-family: 'Consolas', monospace;
-            font-size: 0.95em;
+            font-size: 1em;
             color: #333;
             white-space: pre-wrap;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+        }
+        .password-toggle {
+            position: relative;
+        }
+        .password-toggle input[type="password"],
+        .password-toggle input[type="text"] {
+            padding-right: 40px;
+        }
+        .toggle-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #2563eb;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 0;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 16px 6px;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Device Configuration</h1>
-        <div class="company">Your Company Name</div>
+        <div class="company">Tommy Guard</div>
         <form id="configForm">
             <fieldset>
                 <legend>Identification</legend>
@@ -140,8 +204,11 @@
                 <input type="text" id="cameraIp" name="cameraIp">
                 <label for="cameraUsername">Username</label>
                 <input type="text" id="cameraUsername" name="cameraUsername">
-                <label for="cameraPassword">Password</label>
-                <input type="password" id="cameraPassword" name="cameraPassword">
+                <div class="password-toggle">
+                    <label for="cameraPassword">Password</label>
+                    <input type="password" id="cameraPassword" name="cameraPassword">
+                    <button type="button" class="toggle-btn" onclick="togglePassword('cameraPassword', this)">Show</button>
+                </div>
                 <fieldset>
                     <legend>Camera Params</legend>
                     <div class="form-row">
@@ -152,10 +219,11 @@
                         <div>
                             <label for="camPosition">Position</label>
                             <select id="camPosition" name="camPosition">
-                                <option value="topLeft">Top Left</option>
-                                <option value="topRight">Top Right</option>
-                                <option value="bottomLeft">Bottom Left</option>
-                                <option value="bottomRight">Bottom Right</option>
+                                <option value="topLeft">TopLeft</option>
+                                <option value="topRight">TopRight</option>
+                                <option value="topRight">CENTER</option>
+                                <option value="bottomLeft">BottomLeft</option>
+                                <option value="bottomRight">BottomRight</option>
                             </select>
                         </div>
                     </div>
@@ -179,8 +247,11 @@
                 <input type="text" id="nvrIp" name="nvrIp">
                 <label for="nvrUsername">Username</label>
                 <input type="text" id="nvrUsername" name="nvrUsername">
-                <label for="nvrPassword">Password</label>
-                <input type="password" id="nvrPassword" name="nvrPassword">
+                <div class="password-toggle">
+                    <label for="nvrPassword">Password</label>
+                    <input type="password" id="nvrPassword" name="nvrPassword">
+                    <button type="button" class="toggle-btn" onclick="togglePassword('nvrPassword', this)">Show</button>
+                </div>
                 <label for="nvrPort">Port</label>
                 <input type="number" id="nvrPort" name="nvrPort" min="1" value="1">
             </fieldset>
@@ -244,6 +315,18 @@
             document.getElementById('jsonOutput').style.display = 'block';
             document.getElementById('jsonOutput').textContent = JSON.stringify(config, null, 4);
         });
+
+        // Password visibility toggle
+        function togglePassword(fieldId, btn) {
+            const field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+                btn.textContent = "Hide";
+            } else {
+                field.type = "password";
+                btn.textContent = "Show";
+            }
+        }
     </script>
 </body>
 </html>
