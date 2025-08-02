@@ -1,0 +1,32 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.7">
+  <diagram name="Page-1" id="FIdSOOYzbynRxmdJ0agO">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TFNQLQKdn_34R881f8Zo-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Location -&lt;/div&gt;&lt;div&gt;Client ID:&lt;/div&gt;&lt;div&gt;Location ID:&lt;/div&gt;&lt;div&gt;Unit ID:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Local -&lt;/div&gt;&lt;div&gt;X DHCP&amp;nbsp; X Static&lt;/div&gt;&lt;div&gt;IP:&lt;/div&gt;&lt;div&gt;Subnet Mask:&lt;/div&gt;&lt;div&gt;DNS1:&lt;/div&gt;&lt;div&gt;DNS2&lt;/div&gt;&lt;div&gt;Gateway:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Camera -&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Cam IP:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Cam Number:&lt;/div&gt;&lt;div&gt;Cam Username:&lt;/div&gt;&lt;div&gt;Cam Password:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="470" y="280" width="320" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-2" value="button pressed?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="90" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-2" target="TFNQLQKdn_34R881f8Zo-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-5" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFNQLQKdn_34R881f8Zo-4">
+          <mxGeometry x="-0.0105" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-6" target="TFNQLQKdn_34R881f8Zo-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-6" value="Turn on AP mode wifi&lt;div&gt;SSID: TommyGaurd_DE3FA1&lt;/div&gt;&lt;div&gt;Password: TG&lt;/div&gt;&lt;div&gt;Start webserver on 10.10.10.10&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="150" width="200" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
