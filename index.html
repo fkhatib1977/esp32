@@ -189,6 +189,19 @@
         <div id="jsonOutput" class="output" style="display:none;"></div>
     </div>
     <script>
+        // Disable/enable LAN fields based on DHCP/Static selection
+        function updateLanFields() {
+            const isStatic = document.getElementById('isStatic').value === "true";
+            const lanFields = ['ip', 'subnet', 'gateway', 'dns1', 'dns2'];
+            lanFields.forEach(id => {
+                const field = document.getElementById(id);
+                field.disabled = !isStatic;
+                if (!isStatic) field.value = '';
+            });
+        }
+        document.getElementById('isStatic').addEventListener('change', updateLanFields);
+        window.addEventListener('DOMContentLoaded', updateLanFields);
+
         document.getElementById('configForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const config = {
