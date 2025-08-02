@@ -18,11 +18,9 @@
 # appsettings.json file structure
 Identification
 ```
-{
-  "ClientID": "Burger King",
-  "LocationID": "Woodstock",
-  "UnitID": 3
-}
+ClientID
+LocationID
+UnitID
 ```
 
 LAN
