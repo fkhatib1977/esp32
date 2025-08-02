@@ -1,5 +1,5 @@
-# esp32
-Tommy Guard ESP32 code
+# Tommy Guard ESP32 code
+
 # Networks
 - Hotspot for configuration
   - When 'prog' button in depressed on boot
