@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Configuration - Your Company Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3e50;
+            margin-bottom: 8px;
+        }
+        .company {
+            text-align: center;
+            font-size: 1.2em;
+            color: #4a90e2;
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+        fieldset {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 24px;
+            padding: 18px;
+        }
+        legend {
+            font-weight: bold;
+            color: #2d3e50;
+            padding: 0 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 14px;
+            border: 1px solid #bfc9d1;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+        .form-row > div {
+            flex: 1;
+        }
+        button {
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+        button:hover {
+            background: #357abd;
+        }
+        .output {
+            background: #f9fafb;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 12px;
+            margin-top: 18px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95em;
+            color: #333;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Device Configuration</h1>
+        <div class="company">Your Company Name</div>
+        <form id="configForm">
+            <fieldset>
+                <legend>Identification</legend>
+                <label for="clientId">Client ID</label>
+                <input type="text" id="clientId" name="clientId" required>
+                <label for="locationId">Location ID</label>
+                <input type="text" id="locationId" name="locationId" required>
+                <label for="unitId">Unit ID</label>
+                <input type="text" id="unitId" name="unitId" required>
+            </fieldset>
+            <fieldset>
+                <legend>LAN Settings</legend>
+                <label for="isStatic">IP Type</label>
+                <select id="isStatic" name="isStatic">
+                    <option value="true">Static</option>
+                    <option value="false">DHCP</option>
+                </select>
+                <div class="form-row">
+                    <div>
+                        <label for="ip">IP Address</label>
+                        <input type="text" id="ip" name="ip" placeholder="192.168.1.100">
+                    </div>
+                    <div>
+                        <label for="subnet">Subnet Mask</label>
+                        <input type="text" id="subnet" name="subnet" placeholder="255.255.255.0">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="gateway">Gateway</label>
+                        <input type="text" id="gateway" name="gateway" placeholder="192.168.1.1">
+                    </div>
+                    <div>
+                        <label for="dns1">DNS 1</label>
+                        <input type="text" id="dns1" name="dns1" placeholder="8.8.8.8">
+                    </div>
+                    <div>
+                        <label for="dns2">DNS 2</label>
+                        <input type="text" id="dns2" name="dns2" placeholder="8.8.4.4">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Camera Settings</legend>
+                <label for="cameraIp">Camera IP</label>
+                <input type="text" id="cameraIp" name="cameraIp">
+                <label for="cameraUsername">Username</label>
+                <input type="text" id="cameraUsername" name="cameraUsername">
+                <label for="cameraPassword">Password</label>
+                <input type="password" id="cameraPassword" name="cameraPassword">
+                <fieldset>
+                    <legend>Camera Params</legend>
+                    <div class="form-row">
+                        <div>
+                            <label for="camNumber">Camera #</label>
+                            <input type="number" id="camNumber" name="camNumber" min="1" value="1">
+                        </div>
+                        <div>
+                            <label for="camPosition">Position</label>
+                            <select id="camPosition" name="camPosition">
+                                <option value="topLeft">Top Left</option>
+                                <option value="topRight">Top Right</option>
+                                <option value="bottomLeft">Bottom Left</option>
+                                <option value="bottomRight">Bottom Right</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="fontSize">Font Size</label>
+                            <input type="number" id="fontSize" name="fontSize" min="8" max="48" value="14">
+                        </div>
+                        <div>
+                            <label for="textColor">Text Color</label>
+                            <input type="text" id="textColor" name="textColor" value="red">
+                        </div>
+                    </div>
+                    <label for="camText">Text</label>
+                    <input type="text" id="camText" name="camText" value="cooler temprature is {temp}F">
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>NVR Settings</legend>
+                <label for="nvrIp">NVR IP</label>
+                <input type="text" id="nvrIp" name="nvrIp">
+                <label for="nvrUsername">Username</label>
+                <input type="text" id="nvrUsername" name="nvrUsername">
+                <label for="nvrPassword">Password</label>
+                <input type="password" id="nvrPassword" name="nvrPassword">
+                <label for="nvrPort">Port</label>
+                <input type="number" id="nvrPort" name="nvrPort" min="1" value="1">
+            </fieldset>
+            <button type="submit">Generate JSON</button>
+        </form>
+        <div id="jsonOutput" class="output" style="display:none;"></div>
+    </div>
+    <script>
+        document.getElementById('configForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const config = {
+                identification: {
+                    clientId: document.getElementById('clientId').value,
+                    locationId: document.getElementById('locationId').value,
+                    unitId: document.getElementById('unitId').value
+                },
+                lan: {
+                    isStatic: document.getElementById('isStatic').value === "true",
+                    ip: document.getElementById('ip').value,
+                    subnet: document.getElementById('subnet').value,
+                    gateway: document.getElementById('gateway').value,
+                    dns1: document.getElementById('dns1').value,
+                    dns2: document.getElementById('dns2').value
+                },
+                camera: {
+                    ip: document.getElementById('cameraIp').value,
+                    username: document.getElementById('cameraUsername').value,
+                    password: document.getElementById('cameraPassword').value,
+                    params: [
+                        {
+                            camera: parseInt(document.getElementById('camNumber').value, 10),
+                            position: document.getElementById('camPosition').value,
+                            fontSize: parseInt(document.getElementById('fontSize').value, 10),
+                            textColor: document.getElementById('textColor').value,
+                            text: document.getElementById('camText').value
+                        }
+                    ]
+                },
+                nvr: {
+                    ip: document.getElementById('nvrIp').value,
+                    username: document.getElementById('nvrUsername').value,
+                    password: document.getElementById('nvrPassword').value,
+                    params: {
+                        port: parseInt(document.getElementById('nvrPort').value, 10)
+                    }
+                }
+            };
+            document.getElementById('jsonOutput').style.display = 'block';
+            document.getElementById('jsonOutput').textContent = JSON.stringify(config, null, 4);
+        });
+    </script>
+</body>
+</html>
