@@ -93,6 +93,11 @@
             flex: 1 1 0;
             min-width: 0;
         }
+        .button-row {
+            display: flex;
+            gap: 16px;
+            margin-top: 22px;
+        }
         button {
             background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
             color: #fff;
@@ -101,7 +106,6 @@
             border-radius: 7px;
             font-size: 1.15em;
             cursor: pointer;
-            margin-top: 22px;
             font-weight: 700;
             box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
             transition: background 0.2s, box-shadow 0.2s;
@@ -109,6 +113,12 @@
         button:hover {
             background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
             box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+        }
+        .reset-btn {
+            background: linear-gradient(90deg, #f87171 0%, #ef4444 100%);
+        }
+        .reset-btn:hover {
+            background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
         }
         .output {
             background: #f9fafb;
@@ -148,6 +158,10 @@
             .form-row {
                 flex-direction: column;
                 gap: 0;
+            }
+            .button-row {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -255,7 +269,10 @@
                 <label for="nvrPort">Port</label>
                 <input type="number" id="nvrPort" name="nvrPort" min="1" value="1">
             </fieldset>
-            <button type="submit">Generate JSON</button>
+            <div class="button-row">
+                <button type="submit">Save</button>
+                <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+            </div>
         </form>
         <div id="jsonOutput" class="output" style="display:none;"></div>
     </div>
@@ -327,6 +344,15 @@
                 btn.textContent = "Show";
             }
         }
+
+        // Reset button logic
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to reset all fields?')) {
+                document.getElementById('configForm').reset();
+                document.getElementById('jsonOutput').style.display = 'none';
+                updateLanFields();
+            }
+        });
     </script>
 </body>
 </html>
