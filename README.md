@@ -14,3 +14,30 @@
 - OTA
   - Code updates from ota.earlydetectionsystems.com
   
+# appsettings.json file structure
+Identification
+>ClientID
+>LocationID
+>UnitID
+
+Local Network
+>DHCPStatic
+>IP
+>SubnetMask
+>DNS1
+>DNS2
+>Gateway
+
+Camera Info
+Cam IP:
+Cam Number:
+Cam Username:
+Cam Password:
+
+- NVR Info -
+NVR IP:
+NVR Username:
+NVR Password:
+
+
+
