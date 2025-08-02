@@ -16,36 +16,54 @@
   - Code updates from http://ota.earlydetectionsystems.com
   
 # appsettings.json file structure
-Identification
+identification
 ```
-ClientID
-LocationID
-UnitID
+clientId
+locationId
+unitId
 ```
 
-LAN
+lan
 ```
 isStatic
-IP
-SubnetMask
-DNS1
-DNS2
-Gateway
+ip
+subnet
+gateway
+dns1
+dns2
 ```
 
-Camera Info
+frequencyInSeconds
 ```
-Cam IP
-Cam Number
-Cam Username
-Cam Password
+local
+public
 ```
 
-NVR Info
+urls
 ```
-NVR IP
-NVR Username
-NVR Password
+mqtt
+ntp
+ota
+```
+
+camera
+```
+ip
+username
+password
+camera
+position
+fontSize
+textColor
+text
+```
+
+nvr
+```
+ip
+username
+password
+port
 ```
 
 
