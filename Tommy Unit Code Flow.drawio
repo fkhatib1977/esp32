@@ -1,30 +1,257 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0" pages="3">
   <diagram name="Page-1" id="FIdSOOYzbynRxmdJ0agO">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2066" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="TFNQLQKdn_34R881f8Zo-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Location -&lt;/div&gt;&lt;div&gt;Client ID:&lt;/div&gt;&lt;div&gt;Location ID:&lt;/div&gt;&lt;div&gt;Unit ID:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Local -&lt;/div&gt;&lt;div&gt;X DHCP&amp;nbsp; X Static&lt;/div&gt;&lt;div&gt;IP:&lt;/div&gt;&lt;div&gt;Subnet Mask:&lt;/div&gt;&lt;div&gt;DNS1:&lt;/div&gt;&lt;div&gt;DNS2&lt;/div&gt;&lt;div&gt;Gateway:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Camera -&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Cam IP:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Cam Number:&lt;/div&gt;&lt;div&gt;Cam Username:&lt;/div&gt;&lt;div&gt;Cam Password:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" vertex="1" parent="1">
-          <mxGeometry x="470" y="280" width="320" height="520" as="geometry" />
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-1" target="A37fw-3Gmu8eVTQKpPoI-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TFNQLQKdn_34R881f8Zo-2" value="button pressed?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="90" width="80" height="80" as="geometry" />
+        <mxCell id="TFNQLQKdn_34R881f8Zo-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Location -&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Client ID:&lt;/div&gt;&lt;div&gt;Location ID:&lt;/div&gt;&lt;div&gt;Unit ID:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Local -&lt;/div&gt;&lt;div&gt;► DHCP&amp;nbsp; ► Static&lt;/div&gt;&lt;div&gt;IP:&lt;/div&gt;&lt;div&gt;Subnet Mask:&lt;/div&gt;&lt;div&gt;DNS1:&lt;/div&gt;&lt;div&gt;DNS2:&lt;/div&gt;&lt;div&gt;Gateway:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Camera -&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Cam IP:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Cam Number:&lt;/div&gt;&lt;div&gt;Cam Username:&lt;/div&gt;&lt;div&gt;Cam Password:&lt;/div&gt;&lt;div&gt;Temp location:(dropdown)&lt;/div&gt;&lt;div&gt;Temp 1 name:&lt;/div&gt;&lt;div&gt;Temp 2 name:(model b)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- NVR -&lt;/div&gt;&lt;div&gt;NVP IP:&lt;/div&gt;&lt;div&gt;&lt;div&gt;NVR Username:&lt;/div&gt;&lt;div&gt;NVR Password:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" parent="1" vertex="1">
+          <mxGeometry x="590" y="370" width="180" height="450" as="geometry" />
         </mxCell>
-        <mxCell id="TFNQLQKdn_34R881f8Zo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-2" target="TFNQLQKdn_34R881f8Zo-6">
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-5" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-2" target="A37fw-3Gmu8eVTQKpPoI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-2" value="button pressed?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TFNQLQKdn_34R881f8Zo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TFNQLQKdn_34R881f8Zo-2" target="TFNQLQKdn_34R881f8Zo-6" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="650" y="170" as="targetPoint" />
+            <mxPoint x="660" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TFNQLQKdn_34R881f8Zo-5" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFNQLQKdn_34R881f8Zo-4">
+        <mxCell id="TFNQLQKdn_34R881f8Zo-5" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TFNQLQKdn_34R881f8Zo-4" vertex="1" connectable="0">
           <mxGeometry x="-0.0105" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TFNQLQKdn_34R881f8Zo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TFNQLQKdn_34R881f8Zo-6" target="TFNQLQKdn_34R881f8Zo-1">
+        <mxCell id="TFNQLQKdn_34R881f8Zo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="TFNQLQKdn_34R881f8Zo-6" target="TFNQLQKdn_34R881f8Zo-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TFNQLQKdn_34R881f8Zo-6" value="Turn on AP mode wifi&lt;div&gt;SSID: TommyGaurd_DE3FA1&lt;/div&gt;&lt;div&gt;Password: TG&lt;/div&gt;&lt;div&gt;Start webserver on 10.10.10.10&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="150" width="200" height="60" as="geometry" />
+        <mxCell id="TFNQLQKdn_34R881f8Zo-6" value="Turn on AP mode wifi&lt;div&gt;SSID: TommyGaurd_DE3FA1&lt;/div&gt;&lt;div&gt;Password: TG&lt;/div&gt;&lt;div&gt;Start webserver on 192.168.4.1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="270" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-1" value="Startup Routine" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="A37fw-3Gmu8eVTQKpPoI-2" target="TFNQLQKdn_34R881f8Zo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-2" value="&lt;div&gt;Set pin numbers&lt;/div&gt;Set pin I/O" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="A37fw-3Gmu8eVTQKpPoI-3" target="A37fw-3Gmu8eVTQKpPoI-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-3" value="Read config vars from SPIFFS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-4" value="Store vars in SPIFFS&lt;div&gt;Reboot&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="870" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A37fw-3Gmu8eVTQKpPoI-9" value="Start Main Loop" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oW4hwpgXKib2fVvRKpUw" name="Page-2">
+    <mxGraphModel dx="2066" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UlN7_520laeq79yIU80r-1" value="Main Loop" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-2" value="Start conversion on evap temp sensor 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-3" value="non-blocking wait 750ms" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-5" value="Read evap temp sensor 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-7" value="Read box temp sensor(1 wire)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="630" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-8" value="Start conversion on evap temp sensor 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-9" value="Read evap temp sensor 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-10" value="Read prep table temp sensor 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-11" value="Start conversion on box temp sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-12" value="Start conversion on table temp sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-13" value="Only on model B units" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="630" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-14" value="Only on model A units" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="630" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-15" value="Read box temp, humidity, pressure sensor(I2C)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-16" value="On all models" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-17" value="Read time/date" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-18" value="Non-blocking wait for&amp;nbsp; trigger from RTC 2 second alarm" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-19" value="Push temp and time data to MQTT server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="820" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-20" value="Read &#39;data received&#39; flag from server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="890" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UlN7_520laeq79yIU80r-21" value="Push data to LCD display" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="950" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="qL6FeRaufXTsKWgUg6_O" name="Page-3">
+    <mxGraphModel dx="1181" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="270" width="330" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-2" value="Evap Sensor 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-3" value="Evap Sensor 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-4" value="TG IP&lt;div&gt;CAM IP&lt;/div&gt;&lt;div&gt;NVR IP&lt;/div&gt;&lt;div&gt;Server&amp;nbsp; IP&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;Box Temp&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="190" y="285" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-6" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.997;exitY=0.321;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2PTvHnQOv7ORcXQOD2O9-1" target="2PTvHnQOv7ORcXQOD2O9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="310" as="sourcePoint" />
+            <mxPoint x="450" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="290" />
+              <mxPoint x="580" y="220" />
+              <mxPoint x="480" y="155" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-7" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="2PTvHnQOv7ORcXQOD2O9-1" target="2PTvHnQOv7ORcXQOD2O9-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="270" as="sourcePoint" />
+            <mxPoint x="360" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="300" />
+              <mxPoint x="550" y="240" />
+              <mxPoint x="440" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-9" value="Box Temp, Hum, Press Sensor (interrnal)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-10" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.994;entryY=0.684;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="2PTvHnQOv7ORcXQOD2O9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="400" as="sourcePoint" />
+            <mxPoint x="460" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-11" value="LAN Cable with POE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2PTvHnQOv7ORcXQOD2O9-10">
+          <mxGeometry x="0.2915" y="-6" relative="1" as="geometry">
+            <mxPoint x="34" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-12" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="850" width="330" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-13" value="Evap Sensor 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="710" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-14" value="Evap Sensor 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="760" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-15" value="TG IP&lt;div&gt;CAM IP&lt;/div&gt;&lt;div&gt;NVR IP&lt;/div&gt;&lt;div&gt;Server&amp;nbsp; IP&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Table Temp&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Box Temp&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="190" y="865" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-16" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.997;exitY=0.321;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2PTvHnQOv7ORcXQOD2O9-12" target="2PTvHnQOv7ORcXQOD2O9-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="890" as="sourcePoint" />
+            <mxPoint x="450" y="840" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="870" />
+              <mxPoint x="580" y="800" />
+              <mxPoint x="480" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="2PTvHnQOv7ORcXQOD2O9-12" target="2PTvHnQOv7ORcXQOD2O9-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="850" as="sourcePoint" />
+            <mxPoint x="360" y="760" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="880" />
+              <mxPoint x="550" y="820" />
+              <mxPoint x="440" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-19" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.994;entryY=0.684;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="2PTvHnQOv7ORcXQOD2O9-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="980" as="sourcePoint" />
+            <mxPoint x="460" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-20" value="12 wall power supply" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2PTvHnQOv7ORcXQOD2O9-19">
+          <mxGeometry x="0.2915" y="-6" relative="1" as="geometry">
+            <mxPoint x="34" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-21" value="Table Temp Sensor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="570" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-22" value="Box Temp Sensor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="620" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-23" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="2PTvHnQOv7ORcXQOD2O9-21" source="2PTvHnQOv7ORcXQOD2O9-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="499" y="771" as="sourcePoint" />
+            <mxPoint x="450" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="890" />
+              <mxPoint x="580" y="660" />
+              <mxPoint x="480" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-24" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.994;exitY=0.453;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="2PTvHnQOv7ORcXQOD2O9-22" source="2PTvHnQOv7ORcXQOD2O9-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="758" as="sourcePoint" />
+            <mxPoint x="360" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="870" />
+              <mxPoint x="550" y="680" />
+              <mxPoint x="440" y="635" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-27" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;Model B&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="510" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTvHnQOv7ORcXQOD2O9-28" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;Model A&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="50" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
