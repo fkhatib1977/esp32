@@ -1,0 +1,310 @@
+{
+  "isConfigured": {
+    "_hidden": true,
+    "type": "boolean",
+    "value": true
+  },
+  "sensors": {
+    "_hidden": true,
+    "value": [
+    ]
+  },
+  "identification": {
+    "_group": true,
+    "_title": "Device Identification",
+    "clientId": {
+      "type": "text",
+      "label": "Client ID",
+      "value": "ABC123",
+      "required": true
+    },
+    "locationId": {
+      "type": "text",
+      "label": "Location ID",
+      "value": "LOC456"
+    },
+    "unitId": {
+      "type": "text",
+      "label": "Unit ID",
+      "value": "UNIT789"
+    },
+    "version": {
+      "type": "text",
+      "label": "Firmware Version",
+      "value": "1.0.3"
+    },
+    "board": {
+      "_hidden": true,
+      "type": "select",
+      "label": "Board",
+      "options": [
+        "WiFi LoRa 32",
+        "ESP32-S3-POE-ETH"
+      ],
+      "value": "WiFi LoRa 32"
+    }
+  },
+  "network": {
+    "_group": true,
+    "_title": "Network Configuration",
+    "connectionType": {
+      "type": "select",
+      "label": "Connection Type",
+      "options": [
+        "LAN",
+        "WIFI"
+      ],
+      "value": "WIFI"
+    },
+    "lan": {
+      "_group": true,
+      "_title": "LAN Settings",
+      "visibleIf": "network_connectionType == 'LAN'",
+      "isStatic": {
+        "type": "boolean",
+        "label": "Use Static IP",
+        "value": false
+      },
+      "ipConfig": {
+        "_group": true,
+        "_title": "IP Configuration",
+        "visibleIf": "network_LAN_isStatic == false",
+        "_collapsible": false,
+        "_collapsed": false,
+        "ip": {
+          "type": "text",
+          "label": "IP Address",
+          "value": "192.168.1.100"
+        },
+        "subnet": {
+          "type": "text",
+          "label": "Subnet Mask",
+          "value": "255.255.255.0"
+        },
+        "gateway": {
+          "type": "text",
+          "label": "Gateway",
+          "value": "192.168.1.1"
+        },
+        "dns1": {
+          "type": "text",
+          "label": "Primary DNS",
+          "value": "8.8.8.8"
+        },
+        "dns2": {
+          "type": "text",
+          "label": "Secondary DNS",
+          "value": "8.8.4.4"
+        }
+      }
+    },
+    "wifi": {
+      "_group": true,
+      "_title": "WiFi Settings",
+      "visibleIf": "network_connectionType == 'WIFI'",
+      "ssid": {
+        "type": "text",
+        "label": "WiFi SSID",
+        "value": "FerdowsFarm-2.4"
+      },
+      "password": {
+        "type": "password",
+        "label": "WiFi Password",
+        "value": "Bb9511249("
+      }
+    }
+  },
+  "cameras": [
+    {
+      "_group": true,
+      "_title": "Camera Configuration",
+      "enabled": {
+        "type": "boolean",
+        "label": "Enable Camera",
+        "value": true
+      },
+      "scheme": {
+        "type": "select",
+        "label": "Protocol",
+        "options": [
+          "http",
+          "https",
+          "rtsp"
+        ],
+        "value": "http"
+      },
+      "ip": {
+        "type": "text",
+        "label": "Camera IP",
+        "value": "66.96.2.44"
+      },
+      "port": {
+        "type": "number",
+        "label": "Port",
+        "value": 8083
+      },
+      "path": {
+        "type": "text",
+        "label": "Stream Path",
+        "value": "/axis-cgi/dynamicoverlay/dynamicoverlay.cgi"
+      },
+      "username": {
+        "type": "text",
+        "label": "Username",
+        "value": "api"
+      },
+      "password": {
+        "type": "password",
+        "label": "Password",
+        "value": "ESP32code!!!"
+      },
+      "overlays": [
+        {
+          "_group": true,
+          "_title": "Overlay Settings",
+          "_collapsible": true,
+          "_collapsed": false,
+          "identity": {
+            "type": "number",
+            "_hidden": true,
+            "value": 0
+          },
+          "camera": {
+            "type": "number",
+            "label": "Camera#",
+            "value": 1
+          },
+					"sensor": {
+						"type": "select",
+						"label": "Sensor",
+						"value": "1-Wire First",
+						"options": "$sensors.value"
+					},
+          "indicator": {
+            "type": "text",
+            "label": "Indicator",
+            "value": "LogicGARD1"
+          },
+          "text": {
+            "type": "text",
+            "label": "Overlay Text",
+            "value": "({time:%d/%m/%Y %H:%M} cooler temperature is {temp}°F)"
+          },
+          "position": {
+            "type": "select",
+            "label": "Text Position",
+            "options": [
+              "TopLeft",
+              "TopRight",
+              "BottomLeft",
+              "BottomRight"
+            ],
+            "value": "TopLeft"
+          },
+          "fontSize": {
+            "type": "number",
+            "label": "Font Size",
+            "value": 64
+          },
+          "textColor": {
+            "type": "text",
+            "label": "Text Color",
+            "value": "white"
+          }
+        },
+        {
+          "_group": true,
+          "_title": "Overlay Settings",
+          "_collapsible": true,
+          "_collapsed": false,
+          "identity": {
+            "type": "number",
+            "_hidden": true,
+            "value": 0
+          },
+          "camera": {
+            "type": "number",
+            "label": "Camera#",
+            "value": 1
+          },
+					"sensor": {
+						"type": "select",
+						"label": "Sensor",
+						"value": "1-Wire Second",
+						"options": "$sensors.value"
+					},
+          "indicator": {
+            "type": "text",
+            "label": "Indicator",
+            "value": "LogicGARD2"
+          },
+          "text": {
+            "type": "text",
+            "label": "Overlay Text",
+            "value": "John Wrench was here at ({time:%d/%m/%Y %H:%M} and his tmeprature was {temp}°F)"
+          },
+          "position": {
+            "type": "select",
+            "label": "Text Position",
+            "options": [
+              "TopLeft",
+              "TopRight",
+              "BottomLeft",
+              "BottomRight"
+            ],
+            "value": "BottomRight"
+          },
+          "fontSize": {
+            "type": "number",
+            "label": "Font Size",
+            "value": 64
+          },
+          "textColor": {
+            "type": "text",
+            "label": "Text Color",
+            "value": "white"
+          }
+        }
+      ]
+    }
+  ],
+  "nvr": {
+    "_group": true,
+    "_title": "NVR Configuration",
+    "enabled": {
+      "type": "boolean",
+      "label": "Enable NVR",
+      "value": true
+    },
+    "sensor": {
+      "type": "select",
+      "label": "Sensor Type",
+      "value": "",
+      "options": "$sensors.value"
+    },
+    "ip": {
+      "type": "text",
+      "label": "NVR IP",
+      "value": "192.168.1.60"
+    },
+    "username": {
+      "type": "text",
+      "label": "Username",
+      "value": "nvradmin"
+    },
+    "password": {
+      "type": "password",
+      "label": "Password",
+      "value": "nvrpass"
+    },
+    "params": {
+      "_group": true,
+      "_title": "NVR Parameters",
+      "port": {
+        "type": "number",
+        "label": "Port",
+        "value": "554123"
+      }
+    }
+  }
+}

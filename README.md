@@ -9,15 +9,15 @@
 - Connection to NTP time server
   - On boot and once a day get time as http request from http://time.earlydetectionsystems.com
 - Connection NVR video server
-  - LAN push to NVR(in appsettings.json file) after every data read
+  - LAN push to NVR(in user.json file) after every data read
 - Connection to IP camera
-  - LAN push to camera(in appsettings.json file) after every data read
+  - LAN push to camera(in user.json file) after every data read
 - OTA
   - Code updates from http://ota.earlydetectionsystems.com
 
 <br><br>
 
-# appSettings.json file terms definitions
+# user.json file terms definitions
 - identification
   - clientId - Client name or ID  *(Burger King, Subway, Food Holdings LLC, Client #2, 45, 897)*
   - locationId - Location of monitored facility *(Woodstock IL, store #23, 3465, 87344)*

@@ -1,0 +1,9 @@
+{
+  "version": "1.0.4",
+  "url": "http://10.0.0.19:8000/LogicGARD.bin",
+  "configUrl": "http://10.0.0.19:8000/admin.json",
+  "checksum": "a9f3c1e7b2d4f8a6c3e1d9b0f7a2e5c4",
+	"description": "Critical security update with OTA enhancements",
+  "mandatory": false,
+  "updateType": "binary"
+}

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Configuration</title>
+  <style>
+    html, body, .container {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 48px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+      padding: 44px 38px 36px 38px;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      color: #2d3e50;
+      margin-bottom: 12px;
+      font-size: 2.3em;
+      letter-spacing: 1px;
+    }
+    .admin-label {
+      text-align: center;
+      font-size: 1em;
+      color: #ef4444;
+      background: #fee2e2;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+    .company {
+      text-align: center;
+      font-size: 1.4em;
+      color: #3b82f6;
+      margin-bottom: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    button {
+      background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 7px;
+      font-size: 1.15em;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+      box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    }
+    button:disabled {
+      background: #e5e7eb !important;
+      color: #9ca3af !important;
+      border: none;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .reset-btn {
+      background: linear-gradient(90deg, #f87171 0%, #ef4444 100%);
+    }
+    .reset-btn:hover {
+      background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
+    }
+    fieldset {
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      padding: 28px 20px 20px 20px;
+      background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+    }
+    legend {
+      font-weight: bold;
+      color: #2563eb;
+      padding: 0 8px;
+      font-size: 1.15em;
+      letter-spacing: 1px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #34495e;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 11px;
+      margin-bottom: 18px;
+      border: 1px solid #bfc9d1;
+      border-radius: 7px;
+      font-size: 1em;
+      background: #f8fafc;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px #e0e7ff;
+      outline: none;
+    }
+    input:disabled, select:disabled, textarea:disabled {
+      background: #f3f4f6 !important;
+      color: #a1a1aa !important;
+      border: 2px dashed #a1a1aa !important;
+      opacity: 1 !important;
+      cursor: not-allowed;
+    }
+    .form-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .form-row > div {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .password-toggle {
+      position: relative;
+    }
+    .password-toggle input[type="password"],
+    .password-toggle input[type="text"] {
+      padding-right: 40px;
+    }
+    .toggle-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #2563eb;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 0;
+    }
+    .time-provider-note {
+      font-size: 0.95em;
+      color: #555;
+      margin-top: -10px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 16px 6px;
+      }
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+      .button-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="admin-label">Admin Panel</div>
+    <h1>Device Configuration</h1>
+    <div class="company">Tommy Guards</div>
+    <form id="configForm">
+
+      <!-- Sensor Configuration -->
+      <fieldset>
+        <legend>Sensor Configuration</legend>
+        <div id="sensorList"></div>
+        <button type="button" onclick="addSensor()" style="margin-top: 10px;">+ Add Sensor</button>
+      </fieldset>
+
+      <!-- Time Provider Section -->
+      <fieldset>
+        <legend>Time Provider</legend>
+        <label for="timeProvider">Select Time Provider</label>
+        <select id="timeProvider" name="timeProvider">
+          <option value="ds3231" selected>DS3231 (RTC Module)</option>
+          <option value="ntp">NTP Server</option>
+        </select>
+        <div class="time-provider-note">Choose how the device should get its current time.</div>
+
+        <!-- DS3231 Info -->
+        <div id="ds3231Info">
+          <p>DS3231 is a battery-backed RTC module. No configuration needed.</p>
+        </div>
+
+        <!-- NTP Controls -->
+        <div id="ntpControls" style="display: none;">
+          <label><input type="checkbox" id="ntpEnabled" checked> Enable NTP</label>
+
+          <div id="ntpSection">
+            <label for="ntpUrl">NTP Server URL</label>
+            <input type="text" id="ntpUrl" name="ntpUrl" value="" placeholder="us.pool.ntp.org">
+
+            <label for="ntpUsername">Username</label>
+            <input type="text" id="ntpUsername" name="ntpUsername" value="" placeholder="username">
+
+            <div class="password-toggle">
+              <label for="ntpPassword">Password</label>
+              <input type="password" id="ntpPassword" name="ntpPassword" value="" placeholder="password">
+              <button type="button" class="toggle-btn" onclick="togglePassword('ntpPassword', this)">Show</button>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="gmtOffset">GMT Offset (seconds)</label>
+                <input type="number" id="gmtOffset" name="gmtOffset" value="" placeholder="-21600">
+              </div>
+              <div>
+                <label for="dstOffset">DST Offset (seconds)</label>
+                <input type="number" id="dstOffset" name="dstOffset" value="" placeholder="3600">
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- MQTT Settings -->
+      <fieldset>
+        <legend>MQTT Settings</legend>
+        <label for="mqttScheme">Scheme</label>
+        <select id="mqttScheme" name="mqttScheme">
+          <option value="http">http</option>
+          <option value="https">https</option>
+        </select>
+
+        <label for="mqttHost">Host</label>
+        <input type="text" id="mqttHost" name="mqttHost" value="" placeholder="tgdata.earlydetectionsystems.com">
+
+        <label for="mqttPort">Port</label>
+        <input type="number" id="mqttPort" name="mqttPort" value="" placeholder="8080">
+
+        <label for="mqttPath">Path</label>
+        <input type="text" id="mqttPath" name="mqttPath" value="" placeholder="/api/data">
+      </fieldset>
+
+      <div class="button-row">
+        <button type="button" onclick="saveConfig()">Save</button>
+        <button type="button" class="reset-btn" onclick="clearForm()">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+  let sensorCounter = 0;
+
+  function togglePassword(id, btn) {
+    const input = document.getElementById(id);
+    if (input.type === "password") {
+      input.type = "text";
+      btn.textContent = "Hide";
+    } else {
+      input.type = "password";
+      btn.textContent = "Show";
+    }
+  }
+
+  document.getElementById("timeProvider").addEventListener("change", function () {
+    const isNtp = this.value === "ntp";
+    document.getElementById("ntpControls").style.display = isNtp ? "block" : "none";
+    document.getElementById("ds3231Info").style.display = isNtp ? "none" : "block";
+  });
+
+  document.getElementById("ntpEnabled").addEventListener("change", function () {
+    document.getElementById("ntpSection").style.display = this.checked ? "block" : "none";
+  });
+
+  document.getElementById("ntpSection").style.display =
+    document.getElementById("ntpEnabled").checked ? "block" : "none";
+
+  function addSensor(data = {}) {
+    const id = `sensor-${sensorCounter++}`;
+    const container = document.createElement("div");
+    container.className = "sensor-block";
+    container.style.marginBottom = "24px";
+    container.dataset.interface = data.interface || "i2c";
+
+    container.innerHTML = `
+      <div class="form-row">
+        <div>
+          <label for="${id}-name">Sensor Name</label>
+          <input type="text" id="${id}-name" value="" placeholder="e.g. Temperature Sensor">
+        </div>
+        <div>
+          <label for="${id}-interface">Interface</label>
+          <select id="${id}-interface" onchange="renderInterfaceFields(this)">
+            <option value="i2c" ${data.interface === "i2c" || !data.interface ? "selected" : ""}>I²C</option>
+            <option value="spi" ${data.interface === "spi" ? "selected" : ""}>SPI</option>
+            <option value="analog" ${data.interface === "analog" ? "selected" : ""}>Analog</option>
+            <option value="onewire" ${data.interface === "onewire" ? "selected" : ""}>1-Wire</option>
+          </select>
+        </div>
+        <div>
+          <label><input type="checkbox" ${data.enabled === false ? "" : "checked"}> Enabled</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="${id}-interval">Read Interval (ms)</label>
+          <input type="number" id="${id}-interval" value="" placeholder="1000">
+        </div>
+      </div>
+
+      <div class="interface-fields"></div>
+
+      <button type="button" onclick="removeSensor(this)" class="reset-btn" style="margin-top: 6px;">Remove</button>
+    `;
+
+    document.getElementById("sensorList").appendChild(container);
+    renderInterfaceFields(container.querySelector("select"), data);
+    updateRemoveButtons();
+  }
+
+  function renderInterfaceFields(select, data = {}) {
+    const block = select.closest(".sensor-block");
+    const container = block.querySelector(".interface-fields");
+    const id = block.querySelector("input[type='text']").id.split("-")[0];
+    const type = select.value;
+    block.dataset.interface = type;
+
+    let html = "";
+    if (type === "i2c") {
+      html = `
+        <div class="form-row">
+          <div>
+            <label for="${id}-sda">SDA Pin</label>
+            <input type="number" id="${id}-sda" value="" placeholder="21">
+          </div>
+          <div>
+            <label for="${id}-scl">SCL Pin</label>
+            <input type="number" id="${id}-scl" value="" placeholder="22">
+          </div>
+        </div>
+      `;
+    } else if (type === "spi") {
+      html = `
+        <div class="form-row">
+          <div><label for="${id}-mosi">MOSI</label><input type="number" id="${id}-mosi" value="" placeholder="23"></div>
+          <div><label for="${id}-miso">MISO</label><input type="number" id="${id}-miso" value="" placeholder="19"></div>
+          <div><label for="${id}-sck">SCK</label><input type="number" id="${id}-sck" value="" placeholder="18"></div>
+          <div><label for="${id}-cs">CS</label><input type="number" id="${id}-cs" value="" placeholder="5"></div>
+        </div>
+      `;
+    } else if (type === "analog") {
+      html = `
+        <div class="form-row">
+          <div><label for="${id}-analog">Analog Pin</label><input type="number" id="${id}-analog" value="" placeholder="34"></div>
+        </div>
+      `;
+    } else if (type === "onewire") {
+      html = `
+        <div class="form-row">
+          <div><label for="${id}-onewire">Data Pin</label><input type="number" id="${id}-onewire" value="" placeholder="4"></div>
+        </div>
+      `;
+    }
+
+    container.innerHTML = html;
+  }
+
+  function removeSensor(button) {
+    button.parentElement.remove();
+    updateRemoveButtons();
+  }
+
+  function updateRemoveButtons() {
+    const sensorBlocks = document.querySelectorAll("#sensorList .sensor-block");
+    const disable = sensorBlocks.length <= 1;
+
+    sensorBlocks.forEach(block => {
+      const removeBtn = block.querySelector(".reset-btn");
+      const checkbox = block.querySelector("input[type='checkbox']");
+      if (removeBtn) removeBtn.disabled = disable;
+      if (checkbox) checkbox.disabled = disable;
+    });
+  }
+
+  function saveConfig() {
+		const sensorBlocks = document.querySelectorAll("#sensorList .sensor-block");
+		const sensors = Array.from(sensorBlocks).map(block => {
+		const interfaceType = block.dataset.interface;
+		const inputs = block.querySelectorAll("input, select");
+		const sensor = {
+			enabled: inputs[2].checked,
+			name: inputs[0].value,
+			interface: interfaceType,
+			readIntervalMs: parseInt(inputs[1].value)
+		};
+
+		if (interfaceType === "i2c") {
+			sensor.sdaPin = parseInt(inputs[3].value);
+			sensor.sclPin = parseInt(inputs[4].value);
+		} else if (interfaceType === "spi") {
+			sensor.mosi = parseInt(inputs[3].value);
+			sensor.miso = parseInt(inputs[4].value);
+			sensor.sck = parseInt(inputs[5].value);
+			sensor.cs = parseInt(inputs[6].value);
+		} else if (interfaceType === "analog") {
+			sensor.analogPin = parseInt(inputs[3].value);
+		} else if (interfaceType === "onewire") {
+			sensor.dataPin = parseInt(inputs[3].value);
+		}
+
+		return sensor;
+		});
+
+		const config = {
+		timeProvider: document.getElementById("timeProvider").value,
+		sensors,
+		ntp: {
+			enabled: document.getElementById("ntpEnabled").checked,
+			url: document.getElementById("ntpUrl").value,
+			username: document.getElementById("ntpUsername").value,
+			password: document.getElementById("ntpPassword").value,
+			gmtOffset: parseInt(document.getElementById("gmtOffset").value),
+			dstOffset: parseInt(document.getElementById("dstOffset").value)
+		},
+		mqtt: {
+			scheme: document.getElementById("mqttScheme").value,
+			host: document.getElementById("mqttHost").value,
+			port: parseInt(document.getElementById("mqttPort").value),
+			path: document.getElementById("mqttPath").value
+		}
+		};
+
+		fetch("/saveAdmin", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(config)
+		})
+		.then(response => {
+		if (!response.ok) throw new Error("Network response was not ok");
+		return response.json();
+		})
+		.then(data => {
+		console.log("Server response:", data);
+		alert("Configuration saved successfully!");
+		})
+		.catch(error => {
+		console.error("Error saving config:", error);
+		alert("Failed to save configuration.");
+		});
+	}
+
+
+  function clearForm() {
+    document.getElementById("configForm").reset();
+    document.getElementById("sensorList").innerHTML = "";
+    addSensor(); // Add one default sensor
+    document.getElementById("ntpSection").style.display =
+      document.getElementById("ntpEnabled").checked ? "block" : "none";
+    document.getElementById("ntpControls").style.display =
+      document.getElementById("timeProvider").value === "ntp" ? "block" : "none";
+    document.getElementById("ds3231Info").style.display =
+      document.getElementById("timeProvider").value === "ntp" ? "none" : "block";
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    addSensor();
+    document.getElementById("timeProvider").dispatchEvent(new Event("change"));
+    document.getElementById("ntpEnabled").dispatchEvent(new Event("change"));
+  });
+</script>
+</body>
+</html>

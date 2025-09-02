@@ -1,0 +1,83 @@
+{
+	"debugEnabled": true,
+  "auth": {
+    "username": "admin",
+    "password": "jw"
+  },
+  "timeProvider": "rtc",
+	"rtc": {
+		"sdaPin": 18,
+		"sclPin": 16,
+		"timeAdjust": {
+			"enabled": true,
+			"year": 2025,
+			"month": 8,
+			"day": 29,
+			"hour": 19,
+			"minute": 30,
+			"second": 0
+		}
+	},
+	"ntp": {
+    "enabled": true,
+    "url": "time1.google.com",
+    "username": "",
+    "password": "",
+    "gmtOffset": -21600,
+    "dstOffset": 3600
+  },
+  "sensors": [
+    {
+			"name": "I2C-1",
+			"enabled": false,
+			"interface": "i2c",
+			"readIntervalMs": 3000,
+			"sdaPin": 18,
+			"sclPin": 16
+		},
+		{
+			"name": "1-Wire First",
+			"enabled": true,
+			"interface": "onewire",
+			"readIntervalMs": 4000,
+			"onewirePin": 17
+		},
+		{
+			"name": "1-Wire Second",
+			"enabled": true,
+			"interface": "onewire",
+			"readIntervalMs": 5000,
+			"onewirePin": 21
+		}
+  ],
+	"mqtt": {
+		"enabled": true,
+		"sensorId": "*",
+		"broker": "broker.emqx.io",
+		"port": 1883,
+		"clientId" : "LogicGARD/ABC123/ABC123",
+		"topic": "devices/esp32-firas/data",
+		"username": "",
+		"password": "",
+		"batchSize": 10,
+		"flushIntervalMs": 20000,
+		"bufferSize": 4096
+	},
+	"accessPoint": {
+		"name": "LogicGARD",
+		"password": "12345678"
+	},
+	"ota":
+	{
+		"checkInUrl": "http://ota.tommygard.com/check",
+		"checkIntervalMs": 30000,
+		"enabled": true,
+		"allowDowngrade": false,
+		"autoApply": true,
+		"currentVersion": "1.0.0",
+		"credentials": {
+			"username": "johnny",
+			"password": "wrench"
+		}
+	}
+}

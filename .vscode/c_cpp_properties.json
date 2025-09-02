@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/remote/Documents/Arduino/libraries/ArduinoJson/src",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/cores/esp32",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/port/xtensa/include",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/xtensa/include",
+                "C:/Users/remote/.platformio/packages/framework-arduinoespressif32/libraries/FS/src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "cl.exe",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
