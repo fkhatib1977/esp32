@@ -4,11 +4,6 @@
     "type": "boolean",
     "value": true
   },
-  "sensors": {
-    "_hidden": true,
-    "value": [
-    ]
-  },
   "identification": {
     "_group": true,
     "_title": "Device Identification",
@@ -136,7 +131,7 @@
       "ip": {
         "type": "text",
         "label": "Camera IP",
-        "value": "66.96.2.44"
+        "value": "66.96.2.52"
       },
       "port": {
         "type": "number",
@@ -241,7 +236,7 @@
           "text": {
             "type": "text",
             "label": "Overlay Text",
-            "value": "John Wrench was here at ({time:%d/%m/%Y %H:%M} and his tmeprature was {temp}°F)"
+            "value": "John Wrench was here at {time:%d/%m/%Y %H:%M} and his temprature was {temp}°F"
           },
           "position": {
             "type": "select",
@@ -303,7 +298,7 @@
       "port": {
         "type": "number",
         "label": "Port",
-        "value": "554123"
+        "value": 554123
       }
     }
   }

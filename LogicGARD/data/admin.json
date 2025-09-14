@@ -56,7 +56,7 @@
 		"broker": "34.243.217.54",
 		"port": 1883,
 		"clientId" : "LogicGARD/ABC123/ABC123",
-		"topic": "devices/esp32-firas/data",
+		"topic": "devices/LogicGARD/data",
 		"username": "",
 		"password": "",
 		"batchSize": 10,
@@ -68,9 +68,9 @@
 		"password": "12345678"
 	},
 	"ota": {
-		"checkInUrl": "http://10.0.0.19:8000/check",
-		"host": "10.0.0.19",
-		"checkIntervalMs": 8000,
+		"checkInUrl": "http://10.0.0.20:8000/check",
+		"host": "10.0.0.20",
+		"checkIntervalMs": 2000,
 		"enabled": true,
 		"allowDowngrade": false,
 		"autoApply": true,

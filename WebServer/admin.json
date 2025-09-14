@@ -31,7 +31,7 @@
 			"name": "I2C-1",
 			"enabled": true,
 			"interface": "i2c",
-			"readIntervalMs": 3000,
+			"readIntervalMs": 1000,
 			"sdaPin": 21,
 			"sclPin": 22
 		},
@@ -39,27 +39,27 @@
 			"name": "1-Wire First",
 			"enabled": true,
 			"interface": "onewire",
-			"readIntervalMs": 4000,
+			"readIntervalMs": 1000,
 			"onewirePin": 17
 		},
 		{
 			"name": "1-Wire Second",
 			"enabled": true,
 			"interface": "onewire",
-			"readIntervalMs": 5000,
-			"onewirePin": 23
+			"readIntervalMs": 1000,
+			"onewirePin": 13
 		}
   ],
 	"mqtt": {
 		"enabled": true,
 		"sensorId": "*",
-		"broker": "broker.emqx.io",
+		"broker": "34.243.217.54",
 		"port": 1883,
 		"clientId" : "LogicGARD/ABC123/ABC123",
 		"topic": "devices/esp32-firas/data",
 		"username": "",
 		"password": "",
-		"batchSize": 10,
+		"batchSize": 1,
 		"flushIntervalMs": 20000,
 		"bufferSize": 4096
 	},
@@ -67,9 +67,9 @@
 		"name": "LogicGARD",
 		"password": "12345678"
 	},
-	"ota":
-	{
+	"ota": {
 		"checkInUrl": "http://10.0.0.19:8000/check",
+		"host": "10.0.0.20",
 		"checkIntervalMs": 8000,
 		"enabled": true,
 		"allowDowngrade": false,
@@ -79,5 +79,12 @@
 			"username": "johnny",
 			"password": "wrench"
 		}
+	},
+	"tftDisplay": {
+		"cs": 5,
+		"dc": 2,
+		"rst": 4,
+		"orientation": 0,
+		"totalLines": 4
 	}
 }

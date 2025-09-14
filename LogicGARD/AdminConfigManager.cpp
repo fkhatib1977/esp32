@@ -3,8 +3,9 @@
 
 AdminConfigManager::AdminConfigManager() {}
 
-void AdminConfigManager::begin() {
-  File file = SPIFFS.open("/admin.json", "r");
+void AdminConfigManager::begin(String filename) {
+  _filename = filename;
+  File file = SPIFFS.open(_filename, "r");
   if (!file || file.isDirectory()) return;
   if (file.size() == 0) {
     file.close();
@@ -16,29 +17,15 @@ void AdminConfigManager::begin() {
   if (error) return;
 }
 
-bool AdminConfigManager::updateFromJsonString(String source) {
-  StaticJsonDocument<7168> json;
-  DeserializationError error = deserializeJson(json, source);
-  if (error) return false;
-
-  File file = SPIFFS.open("/admin.json", "w");
-  if (!file) return false;
-
-  serializeJson(json, file);
-  file.close();
-  begin();
-  return true;
-}
-
 void AdminConfigManager::writeConfig() {
-  File file = SPIFFS.open("/admin.json", "w");
+  File file = SPIFFS.open(_filename, "w");
   if (!file) return;
   serializeJson(doc, file);
   file.close();
 }
 
 void AdminConfigManager::reset() {
-  File file = SPIFFS.open("/admin.json", "w");
+  File file = SPIFFS.open(_filename, "w");
   if (!file) return;
   file.print("{}");
   file.close();

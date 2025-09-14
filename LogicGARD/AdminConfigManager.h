@@ -13,8 +13,7 @@ class AdminConfigManager : public ConfigBase {
 public:
   AdminConfigManager();
 
-  void begin();
-  bool updateFromJsonString(String source) override;
+  void begin(String filename = "/admin.json");
   void writeConfig() override;
   void reset() override;
   String renderHtml(String htmlFilename = "/admin.html") override;

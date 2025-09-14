@@ -108,19 +108,6 @@ JsonVariant ConfigManager::getNested(JsonObject root, const char* path) const {
   return current;
 }
 
-bool ConfigManager::updateFromJsonString(String source) {
-  StaticJsonDocument<7168> json;
-  DeserializationError error = deserializeJson(json, source);
-  if (error) return false;
-
-  File file = SPIFFS.open(_filename, FILE_WRITE);
-  if (!file) return false;
-
-  serializeJson(json, file);
-  file.close();
-  begin(_filename);
-  return true;
-}
 DeviceIdentity ConfigManager::getDeviceIdentity() {
   return {
     get("identification.clientId.value"),
